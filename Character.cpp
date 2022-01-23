@@ -16,9 +16,9 @@ void Character::checkIsAlive()
 
 void Character::displayStats()
 {
-	cout << "\n Character Name: " << m_Name;
-	cout << "\n HP: " << m_HP;
-	cout << "\n SPD: " << m_SPD;
+	cout << "\n Character Name: " << m_Name;              // Character Name
+	cout << "\n HP: " << m_HP;                            // Health Points
+	cout << "\n SPD: " << m_SPD;                          // Speed
 	if (m_IsAlive == true)
 	{
 		cout << "\n Status: Alive";
@@ -28,12 +28,12 @@ void Character::displayStats()
 
 void PC::displayStats()
 {
-	cout << "\n PC Name: " << m_Name;
-	cout << "\n HP: " << m_HP;
-	cout << "\n Weapon: " << m_Weapon;
-	cout << "\n DMG: " << m_DMG;
-	cout << "\n Cooldown: " << m_CoolDown;
-	cout << "\n Potion: " << m_Potion;
+	cout << "\n PC Name: " << m_Name;                     // Player Character Name
+	cout << "\n HP: " << m_HP;                            // Health Points
+	cout << "\n Weapon: " << m_Weapon;                    // Weapon Type
+	cout << "\n DMG: " << m_DMG;                          // Damage
+	cout << "\n Cooldown: " << m_CoolDown;                // Weapon CoolDown
+	cout << "\n Potion: " << m_Potion;                    // Potion Type
 	if (m_IsAlive == true)
 	{
 		cout << "\n Status: Alive";
@@ -43,9 +43,9 @@ void PC::displayStats()
 
 void NPC::displayStats()
 {
-	cout << "\n NPC Name: " << m_Name;
-	cout << "\n Leader: " << m_Leader;
-	cout << "\n HP: " << m_HP;
+	cout << "\n NPC Name: " << m_Name;                    // NPC Name
+	cout << "\n Leader: " << m_Leader;                    // Their current leader
+	cout << "\n HP: " << m_HP;                            // Health Points
 	if (m_IsAlive == true)
 	{
 		cout << "\n Status: Alive";
@@ -55,11 +55,11 @@ void NPC::displayStats()
 
 void Minion::displayStats()
 {
-	cout << "\n Minion Name: " << m_Name;
-	cout << "\n Leader: " << m_Leader;
-	cout << "\n HP: " << m_HP;
-	cout << "\n Gathering: " << m_ResourceGather;
-	cout << "\n Current Load: " << m_CurrentLoad << "kg";
+	cout << "\n Minion Name: " << m_Name;                 // Minion Name
+	cout << "\n Leader: " << m_Leader;                    // Their current leader
+	cout << "\n HP: " << m_HP;                            // Health Points
+	cout << "\n Gathering: " << m_ResourceGather;         // What resource are they gathering 
+	cout << "\n Current Load: " << m_CurrentLoad << "kg"; // How much they are carrying currently
 	if (m_IsAlive == true)
 	{
 		cout << "\n Status: Alive";
@@ -73,13 +73,13 @@ void Minion::displayStats()
 
 void Warrior::displayStats()
 {
-	cout << "\n Warrior Name: " << m_Name;
-	cout << "\n Leader: " << m_Leader;
-	cout << "\n HP: " << m_HP;
-	cout << "\n SPD: " << m_SPD;
-	cout << "\n Weapon: " << m_Weapon;
-	cout << "\n DMG: " << m_DMG;
-	cout << "\n CoolDown: " << m_CoolDown;
+	cout << "\n Warrior Name: " << m_Name;                // Warrior Name
+	cout << "\n Leader: " << m_Leader;                    // Their current leader
+	cout << "\n HP: " << m_HP;                            // Health Points
+	cout << "\n SPD: " << m_SPD;                          // Speed
+	cout << "\n Weapon: " << m_Weapon;                    // Weapon Type
+	cout << "\n DMG: " << m_DMG;                          // Damage
+	cout << "\n CoolDown: " << m_CoolDown;                // Weapon CoolDown
 	if (m_IsAlive == true)
 	{
 		cout << "\n Status: Alive";
@@ -89,12 +89,12 @@ void Warrior::displayStats()
 
 void Boss::displayStats()
 {
-	cout << "\n Boss Name: " << m_Name;
-	cout << "\n HP: " << m_HP;
-	cout << "\n SPD: " << m_SPD;
-	cout << "\n Weapon: " << m_Weapon;
-	cout << "\n DMG: " << m_DMG;
-	cout << "\n CoolDown: " << m_CoolDown;
+	cout << "\n Boss Name: " << m_Name;                   // Boss Name
+	cout << "\n HP: " << m_HP;                            // Health Points
+	cout << "\n SPD: " << m_SPD;                          // Speed
+	cout << "\n Weapon: " << m_Weapon;                    // Weapon Type
+	cout << "\n DMG: " << m_DMG;                          // Damage
+	cout << "\n CoolDown: " << m_CoolDown;                // Weapon CoolDown
 	if (m_IsAlive == true)
 	{
 		cout << "\n Status: Alive";
@@ -102,11 +102,13 @@ void Boss::displayStats()
 	else { cout << "\n Status: Dead"; }
 }
 
+// PC Default Constructor
 PC::PC()
 {
 	cout << "\n PC has spawned";
 }
 
+// PC Parameters Constructor
 PC::PC(string nameSet, string weaponSet, string potionSet, 
 	float hpSet, float spdSet, float dmgSet, float coolDownSet)
 {
@@ -128,12 +130,14 @@ PC::PC(string nameSet, string weaponSet, string potionSet,
 	else { cout << "\n Status: Dead"; }
 }
 
+// NPC Default Constructor
 NPC::NPC()
 {
 	cout << "\n";
 	cout << "\n NPC has spawned";
 }
 
+// NPC Parameters Constructor
 NPC::NPC(string nameSet, string leaderSet, float hpSet, float spdSet)
 {
 	m_Name = nameSet;
@@ -151,11 +155,13 @@ NPC::NPC(string nameSet, string leaderSet, float hpSet, float spdSet)
 	else { cout << "\n Status: Dead"; }
 }
 
+// Minion Default Constructor
 Minion::Minion()
 {
 	cout << "\n NPC Minion has spawned";
 }
 
+// Minion Parameters Constructor
 Minion::Minion(string nameSet, string leaderSet,
 	string resourceSet, float hpSet, float currentLoadSet)
 {
@@ -180,11 +186,13 @@ Minion::Minion(string nameSet, string leaderSet,
 	}
 }
 
+// Warrior Default Constructor
 Warrior::Warrior()
 {
 	cout << "\n NPC Warrior has spawned";
 }
 
+// Warrior Parameters Constructor
 Warrior::Warrior(string nameSet, string weaponSet, string leaderSet, 
 	float hpSet, float spdSet, float dmgSet, float coolDownSet)
 {
@@ -207,11 +215,13 @@ Warrior::Warrior(string nameSet, string weaponSet, string leaderSet,
 	else { cout << "\n Status: Dead"; }
 }
 
+// Boss Default Constructor
 Boss::Boss()
 {
 	cout << "\n NPC Boss has spawned";
 }
 
+// Boss Parameters Constructor
 Boss::Boss(string nameSet, string weaponSet,
 	float hpSet, float spdSet, float dmgSet, float coolDownSet)
 {

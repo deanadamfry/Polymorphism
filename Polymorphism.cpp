@@ -117,6 +117,7 @@ void mainMenu()
 			grunts[i].checkIsAlive();
 		}
 
+		// Display Results
 		cout << "\n Class Polymorphism";
 		cout << "\n ------------------ Start ------------------";
 		cout << "\n\n PC Stats: ";
