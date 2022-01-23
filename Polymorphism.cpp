@@ -1,5 +1,5 @@
 // =======================================================
-// Class - Week 10
+// Polymorphism - Week 10
 // Dean Fry, December 2021
 // =======================================================
 
@@ -159,7 +159,7 @@ void mainMenu()
 void startScreen()
 {
 	cout << "\n========================================= \n";
-	cout << "====== Class - Week 10 \n";
+	cout << "====== Polymorphism - Week 10 \n";
 	cout << "====== Dean Fry, December 2021 \n";
 	cout << "========================================= \n";
 	cout << "\n ====== Welcome Player 1 ======\n";
